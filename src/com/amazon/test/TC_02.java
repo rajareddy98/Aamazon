@@ -15,18 +15,18 @@ public class TC_02 extends BaseTest
 	@Test(priority=2)
 	public void inValideData() throws InterruptedException
 	{
-		String un = ExcelData.getData(file_path, "TC02", 1, 0);
+		String un = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\pageDetails.xlsx", "TC02", 1, 0);
 		OnlineShoppingsiteinIndia on= new OnlineShoppingsiteinIndia(driver);
 		AmazonSignIn am= new AmazonSignIn(driver);
 		
 		on.clickOnSigin();
 		am.enterUserName(un);
 		am.clickONContinueButton();
-		int cn =ExcelData.getRowCount(file_path, "TC02");
+		int cn =ExcelData.getRowCount("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\pageDetails.xlsx", "TC02");
 		
 		for(int i=0; i<cn; i++)
 		{
-			String pw = ExcelData.getData(file_path, "TC02", i, 1);
+			String pw = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\pageDetails.xlsx", "TC02", i, 1);
 			Reporter.log("password"+pw,true);
 			am.enterPassword(pw);
 			am.clickOnLoginButton();

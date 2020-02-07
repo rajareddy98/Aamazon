@@ -16,8 +16,8 @@ public class TC_03 extends  BaseTest
 	public void pinCode() throws InterruptedException
 	{
 
-		String un = ExcelData.getData(file_path, "TC01", 1, 0);
-		String pw = ExcelData.getData(file_path, "TC01", 1, 1);
+		String un = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\input.xlsx", "TC01", 1, 0);
+		String pw = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\input.xlsx", "TC01", 1, 1);
 		OnlineShoppingsiteinIndia on = new OnlineShoppingsiteinIndia(driver);
 		AmazoninTodayDeals at = new AmazoninTodayDeals(driver);
 		AmazonSignIn am = new AmazonSignIn(driver);

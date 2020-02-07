@@ -18,8 +18,8 @@ public class TC_01 extends BaseTest
 	@Test(priority=3)
 	public void Login() throws InterruptedException
 	{
-		String un = ExcelData.getData(file_path, "TC01", 1, 0);
-		String pw = ExcelData.getData(file_path, "TC01", 1, 1);
+		String un = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\pageDetails.xlsx", "TC01", 1, 0);
+		String pw = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\pageDetails.xlsx", "TC01", 1, 1);
 		OnlineShoppingsiteinIndia on= new OnlineShoppingsiteinIndia(driver);
 		AmazonSignIn am= new AmazonSignIn(driver);
 		MiMobiles mi=new MiMobiles(driver);

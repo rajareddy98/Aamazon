@@ -1,4 +1,4 @@
-package com.amazon.test;
+ package com.amazon.test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.amazon.Generic.BaseTest;
@@ -15,9 +15,9 @@ public class TC_04 extends BaseTest
 	@Test
 	public void addcart() throws InterruptedException
 	{
-		String un = ExcelData.getData(file_path, "TC01", 1, 0);
-		String pw = ExcelData.getData(file_path, "TC01", 1, 1);
-		String add = ExcelData.getData(file_path, "TC04", 1, 0);
+		String un = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\TestCases.xlsx", "TC01", 1, 0);
+		String pw = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\TestCases.xlsx", "TC01", 1, 1);
+		String add = ExcelData.getData("C:\\Users\\RAJAREDDY\\git\\Amazon\\data\\TestCases.xlsx", "TC04", 1, 0);
 		OnlineShoppingsiteinIndia on= new OnlineShoppingsiteinIndia(driver);
 		AmazonSignIn am= new AmazonSignIn(driver);
 		MiMobiles mi=new MiMobiles(driver);
